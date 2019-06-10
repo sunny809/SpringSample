@@ -2,6 +2,24 @@ package online.tangbk.demo;
 
 public class HelloWorld {
 
+	public HelloWorld() {
+
+	}
+
+	public HelloWorld(SomeOtherBean someOtherbean) {
+		someOtherbean.execute();
+	}
+
+	public SomeOtherBean getSomeOtherBean() {
+		return someOtherBean;
+	}
+
+	public void setSomeOtherBean(SomeOtherBean someOtherBean) {
+		this.someOtherBean = someOtherBean;
+	}
+
+	public SomeOtherBean someOtherBean;
+
 	private String name;
 
 	public String getName() {
@@ -43,6 +61,8 @@ public class HelloWorld {
 	}
 
 	public void printHello() {
+
+		someOtherBean.execute();
 		System.out.println("Hello !" + name);
 	}
 
